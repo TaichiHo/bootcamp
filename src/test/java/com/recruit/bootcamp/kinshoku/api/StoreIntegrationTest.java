@@ -91,6 +91,13 @@ public class StoreIntegrationTest {
 
     @Test
     public void testCreatesStoreApiFail() throws JsonProcessingException {
-
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("storeName", "whateverName");
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<String> httpEntity = new HttpEntity<>(OBJECT_MAPPER.writeValueAsString(requestBody), headers);
+        ResponseEntity<Store> responseEntity = restTemplate.postForEntity(SERVER_URL + "store",
+                httpEntity, Store.class, Collections.emptyMap());
+        assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
     }
 }
