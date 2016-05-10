@@ -8,11 +8,11 @@ import lombok.Value;
 @Value
 public class Constants {
     // probably should change to jpy in the future
-    static String CURRENCY = "usd";
+    public static final String CURRENCY = "usd";
 
-    static String MONTH = "month";
+    public static final String MONTH = "month";
 
-    static String WEEK = "week";
+    public static final String WEEK = "week";
 
-    static String DAY = "day";
+    public static final String DAY = "day";
 }
