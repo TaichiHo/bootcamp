@@ -2,6 +2,7 @@ package com.recruit.bootcamp.kinshoku.domain.common;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.recruit.bootcamp.kinshoku.utils.GeoJsonDeserializer;
+import lombok.Data;
 import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
@@ -14,6 +15,7 @@ import static org.springframework.data.mongodb.core.index.GeoSpatialIndexType.GE
 /**
  * Created by heyueheng on 5/9/16.
  */
+@Data
 @Document
 public class Address {
 

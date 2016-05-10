@@ -85,6 +85,8 @@ public class StoreIntegrationTest {
         assertEquals(store.getDescription(), storeFromDB.getDescription());
         assertEquals(store.getPhoneNumber(), storeFromDB.getPhoneNumber());
         assertEquals(store.getPhoneNumber(), "3238993908");
+
+        storeRepository.delete(store.getId());
     }
 
     @Test

@@ -13,22 +13,7 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 @Document
-public class Store extends Base{
-
-    /**
-     * sample
-     {
-     "storeName":"McDonalds",
-     "phoneNumber":"3238993908",
-     "address":{
-     "street":"1302 W23rd Street",
-     "city":"Los Angeles",
-     "zip":"90007",
-     "location":{"y": 34.035008,"x": -118.286678}
-     },
-     "description":"WTF? How can it be so delicious!"
-     }
-     */
+public class Store extends Base {
 
     @NotNull
     private String storeName;
