@@ -12,9 +12,34 @@ import java.util.Map;
 @Document
 public class Course extends Base {
 
-    String storeId;
+    private String storeId;
 
-    Map<String, Float> priceMap;
+    private Map<String, Float> priceMap;
 
-    List<String> ingredients;
+    private List<String> ingredients;
+
+
+    public String getStoreId() {
+        return storeId;
+    }
+
+    public void setStoreId(String storeId) {
+        this.storeId = storeId;
+    }
+
+    public Map<String, Float> getPriceMap() {
+        return priceMap;
+    }
+
+    public void setPriceMap(Map<String, Float> priceMap) {
+        this.priceMap = priceMap;
+    }
+
+    public List<String> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
+    }
 }
